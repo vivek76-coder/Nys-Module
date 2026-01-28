@@ -28,6 +28,7 @@
             box-sizing: border-box;
         }
 
+
         body {
             color: white;
             font-family: 'Segoe UI', sans-serif;
@@ -171,7 +172,7 @@
 
         }
 
-        /* for dashboard*/
+        /*================ for dashboard===========================*/
         .custome-main-first-div {
             margin: 8rem 10% 0 10%;
 
@@ -185,11 +186,24 @@
 
         .custome-conatiner {
             width: 100%;
-            height: 350px;
             background-image: linear-gradient(to right, #2096F1, #1DE9CA);
             border-radius: 20px 20px 0 0;
 
 
+        }
+
+        /*========================custome-progress-container=========================*/
+        .custome-progress-container {
+            width: 80%;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(15px);
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
         }
 
         /*image*/
@@ -214,15 +228,17 @@
             background-image: linear-gradient(to right, #2096F1);
         }
 
-        /* ===================iframe-style================================= */
-        .yt-custome-design{
+        /* ===================iframe-style(FIRST-CARD)================================= */
+        .yt-custome-design {
             position: relative;
         }
-        .yt-custome-design::before{
+
+        .yt-custome-design::before {
             content: "";
             display: block;
             padding-top: 56.25%;
         }
+
         .yt-custome-design iframe {
             position: absolute;
             height: 100%;
@@ -233,12 +249,26 @@
             border-radius: 15px;
             border-bottom: 0;
         }
+
         .yt-title-custome {
             margin: 22px 0 22px 0;
             font-weight: bolder;
             font-size: x-large;
             border-top: 0;
             border-radius: 3px;
+        }
+
+        /*=================title===============*/
+        .custome-title-video {
+
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.25);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(15px);
+            text-align: center;
+            color: white;
         }
 
         /* ======================pdf-viewer-style============================== */
@@ -309,22 +339,24 @@
     <main id="main-content" class=" mx-auto">
         <div class="container-fluid-lg custome-main-first-div border shadow-lg pt-1">
             <!--************************************************ DASHBOARD ***************************************************************-->
-            <div class="container-fluid-sm  mx-auto custome-conatainer-dashboard p-2 border">
+            <div class="container-fluid-sm  mx-auto custome-conatainer-dashboard p-4 border shadow-lg ">
                 <div class="container-lg custome-conatiner mx-auto d-flex flex-column ">
                     <div class="col-lg-6 col-md-6 custome-container2 mx-auto">
                         <img class="img-fluid" src="https://nyslearners.com/static/profile_pics/default.png">
                         <br>
                         <p><span><b>Hi</b></span>&nbsp;Name</p>
                     </div>
+                    <!--===============PROGRESS BAR=================-->
                     <div class="row">
-                        <div class="col-md-8 mx-auto">
+                        <div class="col-md-8 custome-progress-container mx-auto shadow-md  p-3 rounded">
+                            <h3><i class="fa-solid fa-chart-line"></i>your current status</h3>
                             <div class="progress">
                                 <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <span class="text-center text-white fs-2">your current status<span>
+
                 </div>
             </div>
             <!-- ======================================== CARD-STARTS-HERE=========================-->
@@ -344,15 +376,15 @@
                         <div id="first-card" class="collapse" data-parent="#cardss">
 
                             <!-- video-->
-                             <div class="yt-custome-design">
-                            <iframe class="border"
-                                src="https://www.youtube.com/embed/WuenCV6kGAc?si=rrlKFR7Rwsclk7VP"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="yt-custome-design">
+                                <iframe class="border"
+                                    src="https://www.youtube.com/embed/WuenCV6kGAc?si=rrlKFR7Rwsclk7VP"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
-                            <div class=" yt-title-custome   shadow-sm ">
-                                <span class="text-dark fs-5">INTRODUCTION TO PYTHON</span>
+                            <div class="custome-title-video fw-bolder text-dark">
+                                <h3>PYTHON INTRODUCTION</h3>
                             </div>
                         </div>
                     </div>
@@ -376,7 +408,8 @@
                 <!--============================================ THIRD-CARD =======================================================================-->
                 <div class="card border rounded m-2 shadow-sm">
                     <div class="card-header h-50" data-toggle="collapse" data-target="#third-card">
-                        <h3 class="card-title text-white"><i class="fa-solid fa-circle-exclamation"></i>RECOMANDATION</h3>
+                        <h3 class="card-title text-white"><i class="fa-solid fa-circle-exclamation"></i>RECOMANDATION
+                        </h3>
                     </div>
                     <div class="card-body">
                         <div id="third-card" class="collapse" data-parent="#cardss">
